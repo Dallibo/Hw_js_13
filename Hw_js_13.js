@@ -41,3 +41,30 @@ function findVowels (str2){
 const result1 = findVowels(str2);
 console.log(`Vowels - (${result1}) in str2`);
 
+function Spam(str) {
+    const spamKeywords = [
+      "100% безкоштовно",
+      "збільшення продажів",
+      "тільки сьогодні",
+      "не видаляйте",
+      "ххх"
+    ];
+  const lowercaseStr = str.toLowerCase();
+  for (const keyword of spamKeywords) {
+    if (lowercaseStr.includes(keyword.toLowerCase())) {
+        return true;
+      }
+    }
+  return false;
+  }
+  const text1 = "Отримайте 100% безкоштовно продукт!";
+  const text2 = "Надішліть повідомлення для отримання додаткової інформації";
+  const text3 = "Збільшення продажів на 50%!";
+  const text4 = "Спеціальна пропозиція"; 
+  
+  console.log(Spam(text1));
+  console.log(Spam(text2));
+  console.log(Spam(text3));
+  console.log(Spam(text4));
+  
+
