@@ -102,4 +102,19 @@ var sentence = "Hello my web-31";
 var wordCount = countWords(sentence);
 console.log(`В '${sentence}' ${wordCount} слова`);
 
+function findLongestWord(sentence) {
+  sentence = sentence.trim();
+  var words = sentence.split(" ");
+  var longestWord = "";
+  for (var i = 0; i < words.length; i++) {
+    if (words[i].length > longestWord.length) {
+      longestWord = words[i];
+    }
+  }
+  return longestWord;
+}
+var longestWord = findLongestWord(str1);
+console.log("Самое длинное слово:", longestWord);
+
+
 
