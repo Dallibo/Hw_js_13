@@ -116,5 +116,19 @@ function findLongestWord(sentence) {
 var longestWord = findLongestWord(str1);
 console.log("Самое длинное слово:", longestWord);
 
+function calculateAverageWordLength(sentence) {
+  sentence = sentence.trim();
+  var words = sentence.split(" ");
+  var totalLength = 0;
+  for (var i = 0; i < words.length; i++) {
+    totalLength += words[i].length;
+  }
+  var averageLength = totalLength / words.length;
+  return averageLength.toFixed(2);
+}
+
+var sentence = "Це приклад речення з різною довжиною слів";
+var averageLength = calculateAverageWordLength(sentence);
+console.log("Середня довжина слова:", averageLength);
 
 
