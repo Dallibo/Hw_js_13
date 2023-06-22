@@ -93,3 +93,13 @@ if (isPalindrome(str4)) {
   console.log(`${str4} - не являеться палиндромом`);
 }
 
+function countWords(sentence) {
+  sentence = sentence.trim();
+  var words = sentence.split(" ");
+  return words.length;
+}
+var sentence = "Hello my web-31";
+var wordCount = countWords(sentence);
+console.log(`В '${sentence}' ${wordCount} слова`);
+
+
