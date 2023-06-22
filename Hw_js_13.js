@@ -77,4 +77,19 @@ function truncate(str, maxLength) {
   }
 console.log (truncate(text5, 8));
 
-  
+let str4 = `101`;
+function isPalindrome(str) {
+  str = str.replace(/\s/g, '').toLowerCase();
+  var reversedStr = str.split('').reverse().join('');
+  if (str === reversedStr) {
+    return true;
+  } else {
+    return false;
+  }
+}
+if (isPalindrome(str4)) {
+  console.log(`${str4} - являеться палиндромом`);
+} else {
+  console.log(`${str4} - не являеться палиндромом`);
+}
+
