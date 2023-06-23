@@ -1,5 +1,5 @@
 let str1 = "Hello world"
-let str2 = "Hello my web-31";
+let str2 = "Hello web-31";
 console.log(`str1 - ${str1}, 
 str2 - ${str2}`)
 
@@ -126,8 +126,23 @@ function calculWord(sentence) {
   var averageLength = totalLength / words.length;
   return averageLength.toFixed(2);
 }
-
 var averageLength = calculWord(str2);
 console.log("Средняя длинна слова:", averageLength);
+
+let str5 = prompt("Введите текст:");
+let char = prompt("Введите символ:");
+function findChar(str, char) {
+  var indices = [];
+  var count = 0;
+  for (var i = 0; i < str.length; i++) {
+    if (str.charAt(i) === char) {
+      indices.push(i);
+      count++;
+    }
+  }
+console.log("Индекс символа '" + char + "': " + indices.join(", "));
+console.log("Колличество символа'" + char + "': " + count);
+}
+findChar(str5, char);
 
 
